@@ -1,13 +1,22 @@
 require "sinatra"
 require_relative "models"
-require 'sendgrid-ruby'
-include SendGrid
 
+enable :sessions
 
 get "/" do
-    erb :home
+  erb :home
 end
 
+post "/home" do
+  user_user = User.create(
+    username: params[:username],
+    password: params[:password]
+  )
+  # logs in new user
+  session[:user_id] = user_user.id
+
+  redirect "/"
+end
 
 get "/users" do 
   @users = User.all
@@ -30,33 +39,8 @@ get "/animals" do
 end
 
 
-post "/" do
-  from = SendGrid::Email.new(email: 'bolamuyis@gmail.com')
-  to = SendGrid::Email.new(email: params[:email])
-  subject = params[:name]
-  content = SendGrid::Content.new(
-    type: 'text/html',
-    value: 
-  "Damn Bola"
-  )
-  # create mail object with from, subject, to and content
-  mail = SendGrid::Mail.new(from, subject, to, content)
-  sg = SendGrid::API.new(api_key: ENV["SENDGRID_API_KEY"])
-  # sends the email
-  response = sg.client.mail._('send').post(request_body: mail.to_json)
+get '/logout' do
+  session[:user_id] = nil
 
-  # display http response code
-  puts response.status_code
-
-  # display http response body
-  puts response.body
-
-  # display http response headers
-  puts response.headers
-
-  redirect "/"
-end
-
-get "/" do
-  erb :home
+  redirect "/users"
 end
