@@ -1,10 +1,49 @@
 body {
-    background-color: rgb(250, 228, 104);
+    background-color: rgb(46, 31, 31);
+    background-image: url(/img/31316774424_985c0d7fbb_k.jpg);
+    background-position-y: center;
+    background-repeat: no-repeat;
 }
 h1 {
-    margin-top: 100px;
+    margin: 150px 0 30px 0;
     padding: 0 25px;
+    color: #FFF;
 }
 .userslistpage {
     line-height: 15px;
+}
+.my-nav.navbar.navbar-expand-lg.navbar-light {
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+#nav {
+    color: white;
+}
+#navhide {
+   opacity: 0;
+}
+.form {
+    width: 300px;
+    margin: 40px auto;
+    border: black 1px solid;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(46, 31, 31);
+    color: #FFF;
+    text-transform: capitalize;
+}
+#line {
+    color: white;
+}
+.label {
+    width: 100px;
+}
+.spacer {
+    text-align: center;
+    width: 270px;
+}
+.input {
+    width: 150px;
 }

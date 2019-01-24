@@ -7,23 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="card-footer" class="card-body">
-          Sign Up or Log In
-            <form action="/home" method="post" id="usrform">
-              <table id="signupLogin">
-                <tbody>
-                <tr>
-                <td>Username:</td><td><input type="text" name="username" placeholder="Username"></td>
-              </tr>
-              <tr>
-                <td>Password:</td><td><input type="password" name="password" placeholder="Password"></td>
-              </tr>
-              <tr>
-                <td></td><td><input type="submit" value=" Login "></td>
-              </tr>
-              </table>
-              </tbody>
-            </form>
-          </div>
+  <div class="form"> <h3>Sign Up or Log In</h3>
+    <form action="/home" method="post" id="usrform">
+      <table id="signupLogin">
+        <tbody>
+          <tr>
+          <td class="label">Username:</td><td><input class="input" type="text" name="username" placeholder="Username"></td>
+          </tr>
+          <tr>
+          <td class="label">Password:</td><td><input class="input" type="password" name="password" placeholder="Password"></td>
+          </tr>
+          <tr>
+          <td class="label">First Name:</td><td><input class="input" type="name" name="name" placeholder="First Name"></td>
+          <tr>
+          <tr>
+          <td class="label">Last Name:</td><td><input class="input" type="name" name="name" placeholder="Last Name"></td>
+          <tr>
+          <tr>
+          <td class="label">D.O.B:</td><td><input class="input" type="date" name="name" placeholder="Date of Birth"></td>
+        </table>
+        <table class="spacer">
+          <tr>
+          <td><input class="submit" type="submit" value=" Login "></td>
+          </tr>
+        </table>
+      </tbody>
+    </form>
+  </div>
 </body>
 </html>

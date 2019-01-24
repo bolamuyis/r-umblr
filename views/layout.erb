@@ -20,26 +20,25 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="my-nav-link nav-link" href="/people">People</a>
-      </li>
-      <li class="nav-item">
-        <a class="myNavLink nav-link" href="/animals">Cities</a>
-      </li>
-      <li class="nav-item">
-        <a class="my-nav-link nav-link" href="/cities">Animals</a>
-      </li>
-      <li class="nav-item">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul id="nav" class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a id="nav" class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav" class="nav-link" href="/people">People</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav" class="myNavLink nav-link" href="/animals">Cities</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav" class="nav-link" href="/cities">Animals</a>
+          </li>
+          <li class="nav-item">
           <% if session[:user_id] %>
-            <a class="my-nav-link nav-link" href="/logout">Logout</a>
+            <a id="nav" class="nav-link" href="/logout">Logout</a>
           <% else %>
-             <a class="my-nav-link nav-link" href="/">Login</a>
-             
+             <a id="navhide" class="nav-link" href="/">Login</a>
           <% end %>
       </li>
     </ul>
