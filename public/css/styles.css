@@ -1,9 +1,13 @@
 body {
     background-color: rgb(46, 31, 31);
-    background-image: url(/img/31316774424_985c0d7fbb_k.jpg);
-    background-position-y: center;
-    background-repeat: no-repeat;
 }
+.landing {
+    background-color: rgb(46, 31, 31);
+    background-image: url(/img/31316774424_985c0d7fbb_k.jpg);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    margin-top: 200px;
+}   
 h1 {
     margin: 150px 0 30px 0;
     padding: 0 25px;
