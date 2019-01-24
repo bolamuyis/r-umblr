@@ -7,7 +7,29 @@
     <title>Document</title>
 </head>
 <body class="landing">
-  <div class="form"> <h3>Sign Up or Log In</h3>
+<div class=formWrapper>
+<div class="form1"> 
+  <h3>Log In</h3>
+    <form action="/home" method="post" id="usrform">
+      <table id="signupLogin">
+        <tbody>
+          <tr>
+          <td class="label">Username:</td><td><input class="input" type="text" name="username" placeholder="Username"></td>
+          </tr>
+          <tr>
+          <td class="label">Password:</td><td><input class="input" type="password" name="password" placeholder="Password"></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+          <td><input class="submit" type="submit" value=" Login "></td>
+          </tr>
+        </table>
+      </tbody>
+    </form>
+  </div>
+  <div class="form2">
+  <h3>Sign Up</h3>
     <form action="/home" method="post" id="usrform">
       <table id="signupLogin">
         <tbody>
@@ -26,13 +48,14 @@
           <tr>
           <td class="label">D.O.B:</td><td><input class="input" type="date" name="name" placeholder="Date of Birth"></td>
         </table>
-        <table class="spacer">
+        <table>
           <tr>
-          <td><input class="submit" type="submit" value=" Login "></td>
+          <td class="spacer"><input class="submit" type="submit" value=" Submit "></td>
           </tr>
         </table>
       </tbody>
     </form>
+  </div>
   </div>
 </body>
 </html>

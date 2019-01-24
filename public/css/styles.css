@@ -2,11 +2,10 @@ body {
     background-color: rgb(46, 31, 31);
 }
 .landing {
-    background-color: rgb(46, 31, 31);
     background-image: url(/img/31316774424_985c0d7fbb_k.jpg);
     background-origin: border-box;
     background-repeat: no-repeat;
-    margin-top: 200px;
+    margin: auto 0;
 }   
 h1 {
     margin: 150px 0 30px 0;
@@ -28,15 +27,32 @@ h1 {
 #navhide {
    opacity: 0;
 }
-.form {
+.formWrapper {
+    margin: 0 auto;
+    background-color: chocolate;
+    width: 640px;
+}
+.form1 {
     width: 300px;
-    margin: 40px auto;
+    margin: 40px 0;
     border: black 1px solid;
     border-radius: 10px;
     padding: 20px;
     background-color: rgb(46, 31, 31);
     color: #FFF;
     text-transform: capitalize;
+    float: left;
+}
+.form2 {
+    width: 300px;
+    margin: 40px 20px;
+    border: black 1px solid;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(46, 31, 31);
+    color: #FFF;
+    text-transform: capitalize;
+    float: left;
 }
 #line {
     color: white;
@@ -45,9 +61,8 @@ h1 {
     width: 100px;
 }
 .spacer {
-    text-align: center;
-    width: 270px;
+    margin-left: 95px;
 }
 .input {
-    width: 150px;
+    width: 160px;
 }

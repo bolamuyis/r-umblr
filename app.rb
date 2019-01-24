@@ -14,7 +14,6 @@ post "/home" do
   )
   # logs in new user
   session[:user_id] = user_user.id
-
   redirect "/"
 end
 
@@ -23,6 +22,10 @@ get "/users" do
   erb :users
 end
 
+get "/posts" do 
+  @posts = Post.all
+  erb :posts
+end
 
 get "/people" do 
     erb :people
@@ -42,5 +45,5 @@ end
 get '/logout' do
   session[:user_id] = nil
 
-  redirect "/users"
+  redirect "/home"
 end
