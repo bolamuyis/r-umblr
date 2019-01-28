@@ -1,4 +1,8 @@
 <% @posts.each do |post| %>
-
-  <p class="posts]listpage"><%= poster.username %></p> 
+  <p class="postsTitle">
+    <%= post.title %>
+  </p>
+  <p class="postsText">
+    <%= post.content %>
+  </p> 
 <% end %>

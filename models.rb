@@ -1,16 +1,7 @@
 require 'sinatra/activerecord'
 require 'pg'
 
-# set :database, 'postgresql:rumbler-db'
-
-configure :development do
-    set :database, 'postgresql:rumbler-db'
-end
-
-# configure :development do
-    # set :database, ENV['DATABASE_URL']
-# end
-  
+set :database, 'postgresql:rumblr-db'
 
 class User < ActiveRecord::Base
 end
