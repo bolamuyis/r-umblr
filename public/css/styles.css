@@ -7,6 +7,12 @@ body {
     background-repeat: no-repeat;
     margin: auto 0;
 }
+.post_landing {
+    background-image: url(/img/somalia.jpg);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    margin: auto 0;
+}
 .people_landing {
     background-image: url(/img/mother_child.jpg);
     background-origin: border-box;
@@ -46,8 +52,6 @@ h1 {
 }
 .formWrapper {
     margin: 0 auto;
-    background-color: chocolate;
-    width: 640px;
 }
 .form1 {
     width: 300px;
@@ -61,8 +65,18 @@ h1 {
     float: left;
 }
 .form2 {
-    width: 300px;
+    width: 320px;
     margin: 40px 20px;
+    border: black 1px solid;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(46, 31, 31);
+    color: #FFF;
+    text-transform: capitalize;
+    float: left;
+}
+.formPost {
+    margin: 40px 0;
     border: black 1px solid;
     border-radius: 10px;
     padding: 20px;
@@ -80,6 +94,16 @@ h1 {
 .spacer {
     margin-left: 95px;
 }
-.input {
-    width: 160px;
+input {
+    width: 100%;
+}
+input.submit {
+    text-align: center;
+}
+textarea {
+    margin: 10px 0 5px 0;
+    padding: 0;
+}
+.submitButton {
+    margin: 10px 0px 0 100px;
 }

@@ -25,26 +25,20 @@ post '/home' do
 redirect '/home'
 end
 
-
-
-get "/people" do 
+get '/people' do 
     erb :people
 end
 
-get "/cities" do
+get '/cities' do
     erb :cities
 end
 
-get "/animals" do
+get '/animals' do
     erb :animals
 end
 
-get "/users" do
+get '/users' do
   @users = User.all
   erb :users
 end
 
-get "/posts" do
-  @posts = Post.all
-  erb :posts
-end

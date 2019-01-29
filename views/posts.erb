@@ -1,3 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body class="post_landing">
+
+<div class=formWrapper>
+<div class="formPost"> 
+  <h3>Create a Post</h3>
+    <div class=formWrapper>
+    <form action="/home" method="post">
+      <table id="login">
+        <tbody>
+          <tr>
+            <td class="label">Title:</td>
+            <td><input type="name" name="title" cols="80" placeholder="Title"></td>
+          </tr>
+          <tr>
+            <td class="label">Content:</td>
+            <td><textarea rows = "5" cols="80" name="content" required placeholder="Type your article here..."></textarea></td>
+          </tr>
+          <tr>
+            <td class="label">Image:</td>
+            <td><input type="img" name="img" placeholder="Image URL (optional)"></td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="submitButton"><input class="submit" type="submit" value=" Submit "></div>
+        <!--<table>
+          <tr>
+            <td class="spacer"><input class="submit" type="submit" value=" Submit "></td>
+          </tr>
+        </table>-->
+      </tbody>
+    </form>
+    </div>
+  </div>
+</div>
+
 <% @posts.each do |post| %>
   <p class="postsTitle">
     <%= post.title %>
@@ -6,3 +49,6 @@
     <%= post.content %>
   </p> 
 <% end %>
+
+</body>
+</html>
