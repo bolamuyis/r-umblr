@@ -1,0 +1,7 @@
+<div class="contentWrapper">
+<% @posts.each do |post| %>
+  <p class="userslistpage"><%= "Title: " %><%= post.title %></p>
+  <p class="userslistpage"><%= post.content %></p>
+  <div class="postDiv"></div>
+<% end %>
+</div>

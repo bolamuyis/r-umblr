@@ -12,21 +12,21 @@
 <div class="formPost"> 
   <h3>Create a Post</h3>
     <div class=formWrapper>
-    <form action="/home" method="post">
+    <form action="/posts" method="post">
       <table id="login">
         <tbody>
           <tr>
             <td class="label">Title:</td>
-            <td><input type="name" name="title" cols="80" placeholder="Title"></td>
+            <td><input type="name" name="title" required placeholder="Title"></td>
           </tr>
           <tr>
             <td class="label">Content:</td>
             <td><textarea rows = "5" cols="80" name="content" required placeholder="Type your article here..."></textarea></td>
           </tr>
-          <tr>
+          <!--<tr>
             <td class="label">Image:</td>
             <td><input type="img" name="img" placeholder="Image URL (optional)"></td>
-          </tr>
+          </tr>-->
           </tbody>
         </table>
         <div class="submitButton"><input class="submit" type="submit" value=" Submit "></div>
@@ -41,14 +41,7 @@
   </div>
 </div>
 
-<% @posts.each do |post| %>
-  <p class="postsTitle">
-    <%= post.title %>
-  </p>
-  <p class="postsText">
-    <%= post.content %>
-  </p> 
-<% end %>
+
 
 </body>
 </html>

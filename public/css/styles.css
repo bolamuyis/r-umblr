@@ -8,7 +8,7 @@ body {
     margin: auto 0;
 }
 .post_landing {
-    background-image: url(/img/somalia.jpg);
+    background-image: url(/img/8571823324_dd9b6be9b6_k.jpg);
     background-origin: border-box;
     background-repeat: no-repeat;
     margin: auto 0;
@@ -96,6 +96,7 @@ h1 {
 }
 input {
     width: 100%;
+    margin: 2px 0px;
 }
 input.submit {
     text-align: center;
@@ -106,4 +107,18 @@ textarea {
 }
 .submitButton {
     margin: 10px 0px 0 100px;
+}
+.loginButton {
+    margin: 0px 0px 0 0px;
+}
+.signUpButton {
+    margin: 0px 0px 0 0px;
+}
+.postDiv {
+    margin: 20px 0 20px 0;
+    border-bottom: #FFF dotted 1px;
+}
+.contentWrapper {
+    margin: 30px auto;
+    padding: 0 100px;
 }

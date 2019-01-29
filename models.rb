@@ -1,10 +1,20 @@
 require 'sinatra/activerecord'
 require 'pg'
 
-set :database, 'postgresql:rumblr-db'
+configure :development do
+    set :database, 'postgresql:rumblr-db'
+end
+
+# configure :development do 
+#     set :database, ENV['DATABASE_URL']
+# end
 
 class User < ActiveRecord::Base
+    # has_many :posts
 end
 
-class Post < ActiveRecord::Base
+class Post < ActiveRecord::Base 
+    # belongs_to :user
 end
+
+
