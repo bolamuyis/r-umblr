@@ -31,9 +31,13 @@ get '/posts' do
 end
 
 post '/posts' do
+  @user = User.find(session[:user_id])
   Post.create(
     title: params[:title],
-    content: params[:content]
+    content: params[:content],
+    user_id: @user.id,
+    #image_url: t.string[:image_url],                                                                                                                                                                
+    datetime: Time.now
   )
   redirect '/animals'
 end
@@ -48,6 +52,8 @@ end
 
 get '/animals' do
     @posts = Post.all
+    @user = User.find_by(id: session[:user_id])
+
     erb :animals
 end
 

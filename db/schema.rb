@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 2019_01_27_230431) do
     t.string "title"
     t.text "content"
     t.bigint "user_id"
+    t.string "image_url"
+    t.datetime "datetime"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
