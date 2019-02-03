@@ -16,6 +16,9 @@ ActiveRecord::Schema.define(version: 2019_01_27_230431) do
   enable_extension "plpgsql"
 
   create_table "posts", force: :cascade do |t|
+    t.string "username"
+    t.string "first_name"
+    t.string "last_name"
     t.string "title"
     t.text "content"
     t.bigint "user_id"
@@ -31,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_01_27_230431) do
     t.string "dob"
     t.string "username"
     t.string "password"
+    t.integer "post_counter"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

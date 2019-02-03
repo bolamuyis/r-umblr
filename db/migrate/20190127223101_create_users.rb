@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :dob
       t.string :username
       t.string :password
+      t.integer :post_counter
 
       # the following is the same as t.timestamps
       t.datetime :created_at
