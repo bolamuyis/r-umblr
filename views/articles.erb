@@ -1,10 +1,14 @@
 <div class="contentWrapper">
 <% @posts.each do |post| %>
-  <p class="userslistpage"><%= "Title: " %><%= post.title %>
-  <br /><%= post.user_id %><%= post.first_name %><%= post.last_name %>
-  <br /><%= post.username %></p>
-  <p class="userslistpage"><%= post.content %></p>
-  <p class="userslistpage"><%= post.datetime %></p>
+  <div class="articleCopy">
+    <p class="userslistpage"><%= "Title: " %><%= post.title %>
+    <br /><%= "By: " %><%= post.first_name %><%= " " %><%= post.last_name %></p>
+    <p class="userslistpage"><%= post.content %></p>
+    <p class="userslistpage"><%= post.datetime %></p>
+  </div>
+  <div class="articleImg">
+    <img src="<%= post.image_url %>">
+  </div>
   <div class="postDiv"></div>
 <% end %>
 </div>
