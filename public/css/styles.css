@@ -115,10 +115,31 @@ textarea {
     margin: 0px 0px 0 0px;
 }
 .postDiv {
-    margin: 20px 0 20px 0;
+    padding: 20px 0 0 0;
+    margin: 0 0 20px 0;
     border-bottom: #FFF dotted 1px;
+    clear: left;
 }
 .contentWrapper {
     margin: 30px auto;
     padding: 0 100px;
+}
+div.articleCopy {
+    float: left;
+    width: 500px;
+}
+.articleDiv {
+    width: 302px;
+    float: left;
+    margin: 0 40px 0 40px;
+}
+.articleImg {
+    width: 300px;
+    border: white 1px solid;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: white;
 }

@@ -1,5 +1,9 @@
 <% @users.each do |user| %>
-  <p class="userslistpage">
-    <%= "username: "%><%= user.username %><%= " | password: "%><%= user.password %>
-  </p> 
+  <div class="userslistpage">
+    <p><%= "username: "%><%= user.username %><%= " | " %><%= "password: "%><%= user.password %></p>
+    <p><%= "Name: "%><%= user.first_name %><%= " " %><%= user.last_name %></p>
+    <p><%= "Email: "%><%= user.email %></p>
+    <p><%= "Date of Birth: "%><%= user.dob %></p>
+    <div class="postDiv"></div>
+  </div>
 <% end %>

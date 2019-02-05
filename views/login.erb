@@ -1,1 +1,65 @@
-<p class="userslistpage">You are now signed up and logged in.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body class="landing">
+<div class=formWrapper>
+<div class="form1"> 
+  <h3>Log In</h3>
+    <form action="/logged_in" method="post">
+      <table>
+        <tbody>
+          <tr>
+            <td class="label">Username:</td>
+            <td><input class="input" type="text" required name="username" placeholder="Username"></td>
+          </tr>
+          <tr>
+            <td class="label">Password:</td> 
+            <td><input class="input" type="password" required name="password" placeholder="Password"></td>
+          </tr>
+        </table>
+       <div class="loginButton"><input class="loginButton" type="submit" value=" Login "></div>
+      </tbody>
+    </form>
+  </div>
+  <div class="form2">
+  <h3>Sign Up</h3>
+    <form action="/login" method="post">
+      <table id="login">
+        <tbody>
+          <tr>
+            <td class="label">First Name:</td>
+            <td><input class="input" type="name" required name="first_name" placeholder="First Name"></td>
+          <tr>
+          <tr>
+            <td class="label">Last Name:</td>
+            <td><input class="input" type="name" required name="last_name" placeholder="Last Name"></td>
+          <tr>
+          <tr>
+            <td class="label">Email:</td>
+            <td><input class="input" type="name" required name="email" placeholder="Email"></td>
+          <tr>
+          <tr>
+            <td class="label">D.O.B:</td>
+            <td><input class="input" type="date" required name="dob" placeholder="Date of Birth"></td>
+          </tr>
+          <tr>
+            <td class="label">Username:</td>
+            <td><input class="input" type="text" required name="username" placeholder="Username"></td>
+          </tr>
+          <tr>
+            <td class="label">Password:</td>
+            <td><input class="input" type="password" required name="password" placeholder="Password"></td>
+          </tr>
+        </table>
+       <div class="signUpButton"><input class="submit" type="submit" value=" Sign Up "></div>
+      </tbody>
+    </form>
+  </div>
+  </div>
+</body>
+</html>

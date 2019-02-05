@@ -13,7 +13,11 @@ get '/home' do
   erb :home
 end
 
-post '/home' do
+get '/login' do
+  erb :login
+end
+
+post '/login' do
   new_user = User.create(
     first_name: params[:first_name],
     last_name: params[:last_name],	
@@ -23,11 +27,10 @@ post '/home' do
     password: params[:password]
   )
 session[:user_id] = new_user.id
-  flash[:info] = 'you have signed up'
-  redirect '/login'
+  redirect '/'
 end
 
-post '/login' do
+post '/logged_in' do
   @user = User.find_by(username: params[:username])
   if (@user && @user.password == params[:password])
     session[:user_id] = @user.id
@@ -35,7 +38,6 @@ post '/login' do
   end
   erb :error
 end
-
 
 get '/error' do
   erb :error
@@ -74,8 +76,8 @@ post '/posts' do
   redirect '/articles'
 end
 
-get '/login' do
-  erb :login
+get '/logged_in' do
+  erb :logged_in
 end
 
 get '/people' do 
@@ -89,7 +91,6 @@ end
 get '/articles' do
     @posts = Post.all
     @user = User.find_by(id: session[:user_id])
-
     erb :articles
 end
 
