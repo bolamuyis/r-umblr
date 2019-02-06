@@ -6,9 +6,10 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :title
       t.text :content
-      t.references :user
       t.string :image_url                                                                                                                                                                 
-      t.datetime :datetime
+      t.datetime :created_at
+      t.datetime :updated_at
+      t.references :user
     end
   end
 end

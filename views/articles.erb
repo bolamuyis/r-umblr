@@ -1,15 +1,25 @@
+<body class="post_articles">
+  
 <div class="contentWrapper">
+<div class="addpost">
+<form method="posts" action="/posts">
+   <input type ="submit" value="Add Post">
+</form>
+</div>
 <% @posts.each do |post| %>
   <div class="articleDiv">
     <img class="articleImg" src="<%= post.image_url %>">
   </div>
   <div class="articleCopy">
-    <p class="userslistpage"><%= "Title: " %><a href=""><%= post.title %></a></p>
-    <p class="userslistpage"><%= "By: " %><a href=""><%= post.first_name %><%= " " %><%= post.last_name %></a></p>
+    
+    <h4 class="userslistpage"><%= "Title: " %><a href="/post/<%= post.id %>"><%= post.title %></a></h4>
+    <p class="userslistpage"><%= "By: " %><a href="/user/<%= post.first_name %>"><%= " " %><%= post.last_name %></a></p>
     <p class="userslistpage"><%= post.content %></p>
-    <p class="userslistpage"><%= post.datetime %></p>
+    <p class="userslistpage"><%= post.created_at %></p>
   </div>
   <div class="postDiv"></div>
 <% end %>
+
 </div>
 
+</body>

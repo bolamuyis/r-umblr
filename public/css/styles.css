@@ -7,6 +7,12 @@ body {
     background-repeat: no-repeat;
     margin: auto 0;
 }
+.post_articles {
+    background-image: url(/img/somalia.jpg);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    margin: auto 0;
+}
 .post_landing {
     background-image: url(/img/8571823324_dd9b6be9b6_k.jpg);
     background-origin: border-box;
@@ -122,7 +128,9 @@ textarea {
 }
 .contentWrapper {
     margin: 30px auto;
-    padding: 0 100px;
+    padding: 30px 100px;
+    background-color: rgb(46, 31, 31);
+    border-radius: 20px;
 }
 div.articleCopy {
     float: left;
@@ -142,4 +150,9 @@ a {
 }
 a:hover {
     color: white;
+}
+.addpost {
+    width: 150px;
+    background-color: rgb(46, 31, 31);
+    margin: 0 auto 30px auto;
 }

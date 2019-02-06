@@ -17,20 +17,21 @@ get '/login' do
   erb :login
 end
 
-post '/login' do
+post '/logged_in' do
   new_user = User.create(
     first_name: params[:first_name],
     last_name: params[:last_name],	
     email: params[:email],
     dob: params[:dob],
     username: params[:username],
-    password: params[:password]
+    password: params[:password],
+    datetime: Time.now
   )
 session[:user_id] = new_user.id
-  redirect '/'
+  redirect '/logged_in'
 end
 
-post '/logged_in' do
+post '/error' do
   @user = User.find_by(username: params[:username])
   if (@user && @user.password == params[:password])
     session[:user_id] = @user.id
@@ -71,7 +72,7 @@ post '/posts' do
     first_name: @user.first_name,
     last_name: @user.last_name,
     image_url: params[:image_url],                                                                                                                                                              
-    datetime: Time.now
+    created_at: Time.now
   )
   redirect '/articles'
 end
@@ -107,4 +108,15 @@ end
 
 post '/articles' do
   erb :articles
+end
+
+get '/post/:id' do
+  @post = Post.find(params[:id])
+  erb :post_page
+ end
+
+ delete '/post/:id' do
+	@post = Post.find(params[:id])
+	@post.destroy
+	redirect '/articles'
 end

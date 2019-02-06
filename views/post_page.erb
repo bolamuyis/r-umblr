@@ -1,0 +1,18 @@
+
+<div class="contentWrapper">
+    <h3 class="userslistpage"><%= @post.first_name %></h3>
+    <h3 class="userslistpage"><%= @post.title %></h3>
+    <p class="userslistpage"><%= @post.content %></p>
+    <p class="userslistpage">Created: <%= @post.created_at %></p>
+
+    <a href="/post/<%= @post.id %>" name="_method" value="delete">Delete Post</a>
+
+    <p class="userslistpage">Edit Post</p>
+    <form method="post" action="/post/<%= @post.id %>" id="usrform"> 
+        <input type="hidden" name="_method" value="put">
+        <input type="text" name="title" value="<%= @post.title %>">
+        <input type="text" name="body" value="<%= @post.content %>">
+        <button type="submit">Update Post</button>
+    </form>
+</div>
+

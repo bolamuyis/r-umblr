@@ -21,9 +21,10 @@ ActiveRecord::Schema.define(version: 2019_01_27_230431) do
     t.string "last_name"
     t.string "title"
     t.text "content"
-    t.bigint "user_id"
     t.string "image_url"
-    t.datetime "datetime"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -34,9 +35,9 @@ ActiveRecord::Schema.define(version: 2019_01_27_230431) do
     t.string "dob"
     t.string "username"
     t.string "password"
-    t.integer "post_counter"
+    t.datetime "datetime"
     t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "post_counter"
   end
 
 end
