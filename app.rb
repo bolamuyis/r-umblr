@@ -81,14 +81,6 @@ get '/logged_in' do
   erb :logged_in
 end
 
-get '/people' do 
-    erb :people
-end
-
-get '/cities' do
-    erb :cities
-end
-
 get '/articles' do
     @posts = Post.all
     @user = User.find_by(id: session[:user_id])
@@ -110,13 +102,35 @@ post '/articles' do
   erb :articles
 end
 
+# show post
 get '/post/:id' do
-  @post = Post.find(params[:id])
-  erb :post_page
- end
-
- delete '/post/:id' do
 	@post = Post.find(params[:id])
+	erb :post_page
+end
+
+
+post '/delete_account' do
+  @user = User.find_by(id: session[:user_id])
+  @post = Post.where(user_id: @user.id)
+  @post.each { |post| post.destroy}
+  @user.destroy
+  session[:user_id] = nil
+  redirect '/'
+end
+
+
+# update post
+put '/post/:id' do
+	@post = Post.find(params[:id])
+	@post.update(title: params[:title], body: params[:body])
+	@post.save
+	redirect '/post/'+params[:id]
+end
+
+ # delete post
+ get '/delete/:post_id' do
+  @post = User.find_by(id: session[:user_id])
+  @post = Post.find_by(id: params[:post_id])
 	@post.destroy
 	redirect '/articles'
 end
