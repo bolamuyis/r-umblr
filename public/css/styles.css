@@ -30,11 +30,30 @@ body {
     background-origin: border-box;
     background-repeat: no-repeat;
     margin: auto 0;
-}   
+}
+.post_logged_in {
+    background-image: url(/img/jordan-rowland-1139862-unsplash.jpg);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    margin: auto 0;
+}
 h1 {
     margin: 150px 0 30px 0;
     padding: 0 25px;
     color: #FFF;
+}
+
+.homeTextBg {
+    width: 100%;
+    height: 100%;
+    background-color:rgb(46, 31, 31); 
+    opacity: 1;
+}
+#homeText h2 {
+    font-size: 3.5em;
+    font-weight: bolder;
+    margin: 40px 0 0 20px ;
+    color: rgb(46, 31, 31);
 }
 .userslistpage {
     line-height: 15px;
@@ -65,7 +84,7 @@ h1 {
 }
 .form1 {
     width: 300px;
-    margin: 40px 0;
+    margin: 10px 20px;
     border: black 1px solid;
     border-radius: 10px;
     padding: 20px;
@@ -76,7 +95,7 @@ h1 {
 }
 .form2 {
     width: 320px;
-    margin: 40px 20px;
+    margin: 10px 20px;
     border: black 1px solid;
     border-radius: 10px;
     padding: 20px;
@@ -159,4 +178,14 @@ a:hover {
     width: 150px;
     background-color: rgb(46, 31, 31);
     margin: 0 auto 30px auto;
+    clear: both;
+}
+.profileImg img {
+    float: left;
+    width: 150px;
+    margin: 0 20px 0 0;
+}
+.profilePost {
+    float: left;
+    width: 300px;
 }

@@ -1,6 +1,12 @@
-<p class="userslistpage">You are now signed up and logged in.</p>
-<div class="addpost">
-<form method="posts" action="/posts">
-   <input type ="submit" value="Add Post">
-</form>
-</div>
+<body class="post_logged_in">
+   <div class="contentWrapper">
+   <h3 class="userslistpage"><%= @user.first_name %></h3>
+      <h4 class="userslistpage">You are now signed up and logged in.</h4>
+      <div class="addpost">
+      <form method="posts" action="/posts">
+         <input type ="submit" value="Add Post">
+      </form>
+      </div>
+   </div>
+</body>
+

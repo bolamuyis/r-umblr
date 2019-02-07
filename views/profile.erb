@@ -1,0 +1,30 @@
+<body class="post_users">
+  <div class="contentWrapper">
+    <div class="userslistpage">
+      <h4><%= @user.first_name %><%= " " %><%= @user.last_name %></h4>
+       <p><%= "username: "%><%= @user.username %></p>
+      <p><%= "Email: "%><%= @user.email %></p>
+      <p><%= "Date of Birth: "%><%= @user.dob %></p>
+      <div class="postDiv"></div> 
+      <div>
+        <% @posts.each do |p| %>
+          <div class="profileImg">
+            <img class="articleImg" src="<%= p.image_url %>">
+          </div>
+          <div class="profilePost">
+            <h4><%= p.title %></h4>
+            <p><%= p.content %></p>
+          </div>
+          <div class="postDiv"></div>  
+        <%end%>
+      </div>
+    </div>
+    <div class="addpost">
+    <form action="/delete" method="post">
+      <input type="submit" value="Delete account">
+    </form>
+  </div> 
+  </div>
+
+  
+</body>

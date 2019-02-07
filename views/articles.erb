@@ -2,9 +2,13 @@
   
 <div class="contentWrapper">
 <div class="addpost">
+<% if session[:user_id] %>
 <form method="posts" action="/posts">
    <input type ="submit" value="Add Post">
 </form>
+<% else %>
+<p>ha</p>
+<% end %>
 </div>
 <% @posts.each do |post| %>
   <div class="articleDiv">
@@ -13,7 +17,7 @@
   <div class="articleCopy">
     
     <h4 class="userslistpage"><%= "Title: " %><a href="/post/<%= post.id %>"><%= post.title %></a></h4>
-    <p class="userslistpage"><%= "By: " %><a href="/user/<%= post.first_name %>"><%= " " %><%= post.last_name %></a></p>
+    <p class="userslistpage"><%= "By: " %><a href= "/profile" value="/user/<%= post.first_name %>"><%= " " %><%= post.last_name %></a></p>
     <p class="userslistpage"><%= post.content %></p>
     <p class="userslistpage"><%= post.created_at %></p>
   </div>

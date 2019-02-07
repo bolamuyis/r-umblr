@@ -27,9 +27,7 @@ post '/logged_in' do
     password: params[:password],
     datetime: Time.now
   )
-  
 session[:user_id] = new_user.id
-
   redirect '/logged_in'
 end
 
@@ -80,8 +78,7 @@ post '/posts' do
 end
 
 get '/logged_in' do
-  @user = User.find(session[:user_id])
-  # @user = user.username
+  @user = User.find_by(id: session[:user_id])
   erb :logged_in
 end
 
@@ -112,29 +109,14 @@ get '/post/:id' do
 	erb :post_page
 end
 
-
-post '/delete_account' do
-  @user = User.find_by(id: session[:user_id])
-  @post = Post.where(user_id: @user.id)
-  @post.each { |post| post.destroy}
-  @user.destroy
-  session[:user_id] = nil
-  redirect '/'
-end
-
-
 # update post
 put '/post/:id' do
 	@post = Post.find(params[:id])
 	@post.update(title: params[:title], content: params[:body])
 	@post.save
-	redirect '/post/'+params[:id]
+	redirect '/articles'
 end
-post '/delete' do
-  user = User.find(session[:user_id])
-  user.destroy
-  redirect '/'
-end
+
  # delete post
  get '/delete/:post_id' do
   @post = User.find_by(id: session[:user_id])
@@ -143,8 +125,22 @@ end
 	redirect '/articles'
 end
 
-get '/profile' do
-  @user = User.find(session[:user_id])
-  @posts = @user.posts.all 
-  erb :profile
+get '/user' do
+  @user = User.find_by(id: session[:user_id])
+  @posts = Post.find_by(id: params[:post_id])
+  erb :user
+end
+
+get '/delete_account' do
+  @user = User.find_by(id: session[:user_id])
+  @user.destroy
+  session[:user_id] = nil
+  redirect '/'
+end
+
+post '/delete_account' do
+  @user = User.find_by(id: session[:user_id])
+  @user.destroy
+  session[:user_id] = nil
+  redirect '/'
 end
