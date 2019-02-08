@@ -5,12 +5,12 @@ configure :development do
     set :database, 'postgresql:rumblr-db'
 end
 
-configure :production do 
-  set :database, ENV['DATABASE_URL']
-end
+# configure :development do 
+#     set :database, ENV['DATABASE_URL']
+# end
 
 class User < ActiveRecord::Base
-    has_many :posts , dependent: :destroy 
+    has_many :posts, dependent: :destroy 
 end
 
 class Post < ActiveRecord::Base 

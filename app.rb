@@ -27,7 +27,6 @@ post '/logged_in' do
     password: params[:password],
     datetime: Time.now
   )
-  
 session[:user_id] = new_user.id
 
   redirect '/logged_in'
@@ -61,7 +60,6 @@ end
 post '/posts' do
     @user = User.find_by(id: session[:user_id])
       if @user.nil?
-        flash[:info] = "You have not been logged in"
         redirect '/not_login'
       
       erb :posts
@@ -81,12 +79,11 @@ end
 
 get '/logged_in' do
   @user = User.find(session[:user_id])
-  # @user = user.username
   erb :logged_in
 end
 
 get '/articles' do
-    @posts = Post.all
+    @posts = Post.last(20).reverse
     @user = User.find_by(id: session[:user_id])
     erb :articles
 end
@@ -112,7 +109,6 @@ get '/post/:id' do
 	erb :post_page
 end
 
-
 post '/delete_account' do
   @user = User.find_by(id: session[:user_id])
   @post = Post.where(user_id: @user.id)
@@ -121,7 +117,6 @@ post '/delete_account' do
   session[:user_id] = nil
   redirect '/'
 end
-
 
 # update post
 put '/post/:id' do

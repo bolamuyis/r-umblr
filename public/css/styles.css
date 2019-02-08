@@ -38,7 +38,7 @@ body {
     margin: auto 0;
 }
 h1 {
-    margin: 150px 0 30px 0;
+    margin: 50px 0 30px 0;
     padding: 0 25px;
     color: #FFF;
 }
@@ -56,7 +56,7 @@ h1 {
     color: rgb(46, 31, 31);
 }
 .userslistpage {
-    line-height: 15px;
+    line-height: 20px;
     color: white;
 }
 .postsTitle {
@@ -166,7 +166,6 @@ div.articleCopy {
 }
 .articleImg {
     width: 300px;
-    border: white 1px solid;
 }
 a {
     color: white;
@@ -189,3 +188,31 @@ a:hover {
     float: left;
     width: 300px;
 }
+/* All Media Quaries */
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    .form1 {width: 260px;margin: 10px 20px;border: black 1px solid;border-radius: 10px;padding: 20px;background-color: rgb(46, 31, 31);color: #FFF;text-transform: capitalize;float: left;}
+    .form2 {width: 260px;margin: 10px 20px;border: black 1px solid;border-radius: 10px;padding: 20px;background-color: rgb(46, 31, 31);color: #FFF;text-transform: capitalize;float: left;}
+    .contentWrapper {margin: 30px auto;padding: 30px 25px;background-color: rgb(46, 31, 31);border-radius: 20px;}
+    .articleDiv {width: 302px;float: left;margin: 0 40px 0 0px;}
+    div.articleCopy {float: left;width: 275px;}
+    .articleImg {width: 250px;margin: 0 0 10px 0;}
+    .userslistpage {line-height: 30px;color: white;}
+}
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+
+  } 
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) and (max-width:991px) {
+    
+  } 
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) and (max-width:1199px) {
+    
+  } 
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+
+  }
+  /* All Media Quaries */
